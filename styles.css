@@ -1,0 +1,143 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--main-bg);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  background-color: var(--line);
+  border: none;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+.main-img {
+  border-radius: 10px;
+  display: block;
+  height: auto;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-overlay:hover,
+.img-container {
+  opacity: 1;
+}
+
+.img-overlay {
+  background-image: url(./images/icon-view.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-container {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 1em;
+  max-width: 311px;
+}
+
+.main-heading {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.main-leading {
+  color: var(--soft-blue);
+  padding-bottom: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.token-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  align-self: center;
+}
+
+.token {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.token:before {
+  content: url(./images/icon-ethereum.svg);
+  margin-right: 0.5rem;
+  position: relative;
+  top: 3px;
+}
+
+.token-days-left {
+  color: var(--soft-blue);
+}
+
+.token-days-left:before {
+  content: url(./images/icon-clock.svg);
+  margin-right: 0.5rem;
+  position: relative;
+  top: 3px;
+}
+
+.creator-icon {
+  width: 36px;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+}
+
+.creator {
+  font-size: 1rem;
+  color: var(--soft-blue);
+  font-weight: 400;
+  padding-left: 1rem;
+}
+
+.creator-details {
+  display: flex;
+  align-items: center;
+}
